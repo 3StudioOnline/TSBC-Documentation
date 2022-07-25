@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const url3StudioWebsite = "https://3studio.online";
 const urlUnrealMarketplaceProduct_TSBC = "https://www.unrealengine.com/marketplace/en-US/product/fc42c8121e0d445f8887ed6962af796e";
-const urlDiscordInviteLink = "https://discord.gg/3studio";
+const urlDiscordInviteLink = "http://discord.3studio.online";
 const urlGitHubRepository = "https://github.com/3StudioOnline/TSBC-Documentation";
 const urlGitHubIssueTracker = `${urlGitHubRepository}/issues`;
 
