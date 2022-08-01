@@ -2,5 +2,10 @@ import {UE} from '@site/src/lib/utils.mdx'
 
 # Changelog
 
-### 1.0.0 - [2022-07-xx]
+### 1.0.1 - [2022-07-31]
+- Bugfix
+  - Transactions with a nonce of zero will no longer fail.
+  - Ethereum unit conversion helper function will now output correct results even for extremely small result values (e.g. `1` Wei → Tether = `0.000000000000000000000000000001`).
+
+### 1.0.0 - [2022-07-14]
 - Initial release
