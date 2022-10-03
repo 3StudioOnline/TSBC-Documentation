@@ -1,10 +1,8 @@
 # Blockchain Plugin
 
-📺 Trailer <br/>
-🎮 Playable Demo <br/>
 🔌 [Demo Unreal Project](https://dev.azure.com/3StudioOnline/Public%20Resources/_git/Web3UE) (PLUGIN REQUIRED) <br/>
 📽 [Tutorial Videos](https://www.youtube.com/watch?v=Qp_JcKgtlzw&list=PLTztLWdi2XEG8sSoCs_lmqXq1_yvlWmkk) <br/>
-📖 [Documentation](https://3studioonline.github.io/TSBC-Documentation)
+📖 [Documentation](https://3studioonline.github.io/TSBC-Documentation) </br>
 📆 [Roadmap](https://3studioonline.github.io/TSBC-Documentation/roadmap) <br/>
 🛰 [Discord](https://discord.gg/3studio) <br/>
 
