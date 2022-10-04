@@ -14,7 +14,7 @@ function HomepageHeader() {
             <div className="container">
                 <h1 className="hero__title">{siteConfig.title}</h1>
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
-                <img src={require('@site/static/img/logo.png').default} alt={"3Studio Logo"} style={{height:'228px'}}/>
+                <img src={require('@site/static/img/logo.png').default} alt={"3Studio Logo"} style={{height:'352px'}}/>
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
