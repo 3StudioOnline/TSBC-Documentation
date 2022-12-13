@@ -2,10 +2,14 @@ import {UE} from '@site/src/lib/utils.mdx'
 
 # Changelog
 
+### 1.0.8 - [2022-12-12]
+- Added
+    - Support for Unreal Engine 5.1
+
 ### 1.0.7 - [2022-11-10]
 - Added
-  - Support for macOS
-  - Support for iOS
+- Support for macOS
+- Support for iOS
 
 ### 1.0.6 - [2022-10-21]
 - Added
@@ -34,19 +38,19 @@ import {UE} from '@site/src/lib/utils.mdx'
 
 ### 1.0.3 - [2022-08-31]
 - Bugfix
-  - Fixed an overflow error when RLP-encoding big list items.
+    - Fixed an overflow error when RLP-encoding big list items.
 
 ### 1.0.2 - [2022-08-24]
 - Added
-  - Helper functions `StringToBytes()` and `BytesToString()` to convert from Strings to ByteArray and vice versa.
+    - Helper functions `StringToBytes()` and `BytesToString()` to convert from Strings to ByteArray and vice versa.
 - Bugfix
-  - Fixed checksum function.
-  - Fixed API deprecation warnings: `ESPMode::Fast has been deprecated - please use ESPMode::ThreadSafe instead`
+    - Fixed checksum function.
+    - Fixed API deprecation warnings: `ESPMode::Fast has been deprecated - please use ESPMode::ThreadSafe instead`
 
 ### 1.0.1 - [2022-07-31]
 - Bugfix
-  - Transactions with a nonce of zero will no longer fail.
-  - Ethereum unit conversion helper function will now output correct results even for extremely small result values (e.g. `1` Wei → Tether = `0.000000000000000000000000000001`).
+    - Transactions with a nonce of zero will no longer fail.
+    - Ethereum unit conversion helper function will now output correct results even for extremely small result values (e.g. `1` Wei → Tether = `0.000000000000000000000000000001`).
 
 ### 1.0.0 - [2022-07-14]
 - Initial release
