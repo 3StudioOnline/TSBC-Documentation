@@ -11,9 +11,6 @@ import {Step} from '@site/src/lib/utils.mdx'
 
 ![Get Blockchain Configuration](_static/img/blockchain_config/01_get_blockchain_configuration.png)
 
-:::note
-Additional networks will be added in future updates.
-:::
 
 This function returns a *Struct* that contains:
 * <Step text="2"/> Network's RPC URL endpoint
@@ -22,14 +19,26 @@ This function returns a *Struct* that contains:
 * <Step text="5"/> Network's Symbol. 
 
 We didn't provide a block explorer link as it is unlikely to be used in a final product.
- 
-Current networks supported for now are:
-* Ethereum
-* Polygon
-* Ropsten 
-* Rinkeby
 
-The Last two networks are `Ethereum` test nets.
+Currently supported networks are:
+
+* Main Nets:
+  * Ethereum
+  * Polygon
+  * Avalanche
+  * Binance Smart Chain
+  * Cronos
+  * Huobi Eco Chain
+
+* Test Nets:
+  * Ropsten
+  * Rinkeby
+  * Goerli
+  * Sepolia
+  * Avalanche FUJI C-Chain
+  * Binance Smart Chain
+  * Cronos
+  * Huobi Eco Chain
 
 ## Custom Blockchain Configuration
 
