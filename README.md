@@ -49,6 +49,9 @@ If you think that you have found a 🐞 bug 🐞, please report it on our [GitHu
 - Base58 Parser.
 - Secure Random Bytes Library.
 
+**v1.1**
+- Layer 2 reading capability. For both ZK rollup and Optimism. Currently supports: ImmutableX & Loopring
+
 **v1.0**
 - Base58 encoding
 - Bytes array operations
