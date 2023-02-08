@@ -1,17 +1,33 @@
 ---
 sidebar_position: 3
-title: Decode ABI
+title: Decode Smart Contract ABI
 ---
 import {Step} from '@site/src/lib/utils.mdx'
 
-## Decode ABI
+`Decode Smart Contract ABI` node generates a *Function Selector* with argument decoding for a specific function of an *Ethereum Smart Contract*.
 
-`Decode ABI` Decodes the resulting data returned from an *Ethereum* RPC-call. This function requires input as follows:
+* Contract ABI Data Asset <Step text="1"/> : Data asset that holds parsed data for the *Smart Contract ABI*.
+* Function Name <Step text="2"/> : The function name to hash.
+* Data To Decode <Step text="3"/> : The data to decode.
+* Successful <Step text="4"/> : Executes when decoding is successful.
+* Failed <Step text="5"/> : Executes when decoding is fails.
+* Error Message <Step text="6"/> : Contains an error message in case the operation fails. Otherwise, it will be empty.
+* Outputs <Step text="7"/> : `Output pins` will be generated dynamically depending on the selected function.
 
-* Contract ABI Struct <Step text="1"/> : The parsed object generated from `Parse ABI From JSON`.
-* Function Name <Step text="2"/> : The function name that was used to call the *Ethereum Smart Contract* function which returned the data that should now be decoded here.
-* Data to Decode <Step text="3"/> : Data to decode.
+![Decode Smart Contract ABI](_static/img/06_decode-smart-contract-abi.png)
 
-![Decode ABI](_static/img/04_decode_abi.png)
+:::info
+If the operation is successful, the value in the generated *Output pins* <Step text="7"/> will hold the decoded data returned from an *Ethereum* RPC-call.
+:::
 
-If the operation is successful, the value *Decoded ABI Values* <Step text="4"/> will hold the decoded data returned from an *Ethereum* RPC-call.
+## Examples
+
+Here is an example of how the node will look like when selecting different function to generate *Output pins*.
+
+![Decode Smart Contract ABI](_static/img/07_decode-smart-contract-abi-examples.png)
+
+:::warning
+Due to limitations in *Blueprints* adding nested arrays to this node was not possible, so a *Smart Contract* function
+with a `TupleArray` output type can't be decoded, and a *Smart Contract* function with 1 `Tuple` plus any other
+type, can't be decoded also.
+:::
