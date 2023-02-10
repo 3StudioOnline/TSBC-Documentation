@@ -7,7 +7,7 @@ import {Step} from '@site/src/lib/utils.mdx'
 ## Smart Contract ABI
 
 To interact with a smart contract you need to be able to encode and decode the contract functions and their variables. To do so you must either 
-store the contracts ABI or get it from [Ether Scan](https://etherscan.io/) for verified contracts. 
+store the contract's ABI or get it from [Ether Scan](https://etherscan.io/) for verified contracts.
 More on the subject [here](https://docs.soliditylang.org/en/develop/abi-spec.html).
 
 
@@ -24,11 +24,15 @@ For this example we will copy the *Smart Contract ABI* from [Bored Apes Yacht Cl
 
 ## Configure Contract ABI Data Asset
 
-Open the *Contract ABI* data asset, it will hold data as follows:
+Open the *Contract ABI* data asset. It will hold data as follows:
 
-* `Contract Abi Json`: Paste the copied *Smart Contract ABI* Json in this filed. <Step text="1"/>
+* `Contract Abi Json`: Paste the copied *Smart Contract ABI* JSON string into this field. <Step text="1"/>
 * `Parse Json`: Tries to parse the *Smart Contract ABI* from the given JSON. <Step text="2"/>
-* `Contract Abi Validity Status`: Display the status of parsing the *Smart Contract ABI* Json data. <Step text="3"/>
+* `Contract Abi Validity Status`: Displays the status of parsing the *Smart Contract ABI* JSON data. <Step text="3"/>
 * `Contract Abi Functions`: List of data needed from the *Smart Contract ABI* which will be used later for encoding and decoding. <Step text="4"/>
 
 ![Configure Contract ABI Data Asset](_static/img/03_contract-abi-data-asset.png)
+
+:::caution Potential pitfall
+Whenever you make changes to the JSON in `Contract Abi Json` <Step text="1"/>, don't forget to also click the `Parse Json` <Step text="2"/> button.
+:::
