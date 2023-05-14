@@ -4,7 +4,7 @@
 📽 [Tutorial Videos](https://www.youtube.com/watch?v=Qp_JcKgtlzw&list=PLTztLWdi2XEG8sSoCs_lmqXq1_yvlWmkk) <br/>
 📖 [Documentation](https://3studioonline.github.io/TSBC-Documentation) </br>
 📆 [Roadmap](https://3studioonline.github.io/TSBC-Documentation/roadmap) <br/>
-🛰 [Discord](https://discord.gg/3studio) <br/>
+🛰 [Discord](http://discord.3studio.online) <br/>
 
 **Blockchain Integration Plugin**
 Function library to construct and send blockchain transactions via JSON-RPC and communication with smart contracts directly from the engine. All functions are exposed to blueprints for user convenience. Can be Packaged and shipped with Dedicated Servers. No 3rd party libraries or dependencies.

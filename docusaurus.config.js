@@ -7,6 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const url3StudioWebsite = "https://3studio.online";
 const urlUnrealMarketplaceProduct_TSIF = "https://www.unrealengine.com/marketplace/en-US/product/b8a5ef2c915c4359b7e66d08a85d4c74";
 const urlUnrealMarketplaceProduct_TSBC = "https://www.unrealengine.com/marketplace/en-US/product/fc42c8121e0d445f8887ed6962af796e";
+const urlUnrealMarketplaceProduct_TSAI = "https://www.unrealengine.com/marketplace/en-US/product/a730dd3ff54a45db94120b4fa9cae124";
 const urlDiscordInviteLink = "http://discord.3studio.online";
 const urlGitHubRepository = "https://github.com/3StudioOnline/TSBC-Documentation";
 const urlGitHubIssueTracker = `${urlGitHubRepository}/issues`;
@@ -23,7 +24,7 @@ const globalRehypePlugins = [
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "3Studio Online Blockchain Plugin",
+    title: "3S Game Studio Blockchain Plugin",
     tagline: "Adds networking support that allows to communicate and interact with most popular blockchain networks.",
     organizationName: "3StudioOnline", // Usually your GitHub org/user name.
     projectName: "TSBC-Documentation", // Usually your repo name.
@@ -114,9 +115,9 @@ const config = {
             },
 
             navbar: {
-                title: "3Studio Online Blockchain Plugin",
+                title: "3S Game Studio Blockchain Plugin",
                 logo: {
-                    alt: "3Studio Online Blockchain Plugin Logo",
+                    alt: "3S Game Studio Blockchain Plugin Logo",
                     src: "img/logo-48.png",
                 },
                 items: [
@@ -181,12 +182,16 @@ const config = {
                         title: "Unreal Marketplace",
                         items: [
                             {
-                                label: "3Studio Online Blockchain Plugin",
+                                label: "3S Game Studio Blockchain Plugin",
                                 href: urlUnrealMarketplaceProduct_TSBC,
                             },
                             {
-                                label: "3Studio Online IPFS Plugin",
+                                label: "3S Game Studio IPFS Plugin",
                                 href: urlUnrealMarketplaceProduct_TSIF,
+                            },
+                            {
+                                label: "3S Game Studio OpenAI Plugin",
+                                href: urlUnrealMarketplaceProduct_TSAI,
                             },
                         ],
                     },
