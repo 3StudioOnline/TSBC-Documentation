@@ -2,6 +2,22 @@ import {UE} from '@site/src/lib/utils.mdx'
 
 # Changelog
 
+### 2.2.0 - [2023-08-27]
+- Added
+    - Many common Blockchain standards (EIP, ERP, OpenSea, LSP & Universal Profile)
+    - Lukso (MainNet) to Blockchain Configuration list
+    - Lukso (TestNet) to Blockchain Configuration list
+- Changed
+    - `Value` argument for `Sign Transaction` Blueprint function is now optional
+- Fixed
+    - `Contract ABI Decode` function will now correctly parse response body containing only `0x`
+    - The `Contract ABI` Data Asset parser will now filter out unnamed ABI functions that previously showed up as `None` in the function selection list of `Contract ABI Encode` and `Contract ABI Decode` Blueprint functions.
+        - NOTE: Requires clicking the `Parse Json` button again for this fix to be applied to existing Data Assets.
+
+### 2.1.2 - [2023-08-23]
+- Fixed
+  - Build issues on Android target platform
+
 ### 2.1.1 - [2023-04-06]
 - Fixed
   - Build issues for UE5+
