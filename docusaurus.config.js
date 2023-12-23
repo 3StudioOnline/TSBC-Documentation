@@ -55,6 +55,9 @@ const config = {
                     showLastUpdateTime: false,
                     includeCurrentVersion: false,
                     versions: {
+                        "2.3.1": {
+                            banner: "none",
+                        },
                         "2.2.1": {
                             banner: "none",
                         },
