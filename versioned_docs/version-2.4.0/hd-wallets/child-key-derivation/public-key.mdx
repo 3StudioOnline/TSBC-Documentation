@@ -4,7 +4,7 @@ title: Public Key
 ---
 import {Step} from '@site/src/lib/utils.mdx'
 
-Child public keys be derived from both private and public keys. The child can be *hardened* if the parent is private.
+Child public keys can be derived from both private and public keys. The child can be *hardened* if the parent is private.
 Attempting to create a *hardened* child using a public key will result in an error. *Non-hardened* keys are still useful,
 but need to be handled carefully to avoid security risks.
 For more information about the concept of a *hardened* child read [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#implications).

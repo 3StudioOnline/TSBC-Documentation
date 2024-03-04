@@ -22,7 +22,7 @@ knowing the master key data or seed at all.
 ### Security
 
 As long as the master seed and key is kept secret, only the branch of the structure that has its private key leaked is exposed.
-This is in reduces risk of exposure of specific, important keys compared to managing multiple standalone keys.
+This reduces the risk of exposure of specific, important keys compared to managing multiple standalone keys.
 
 ### Recovery
 
@@ -73,7 +73,7 @@ Depth of the key. In the wallet tree-like structure, specifies the number of par
 
 #### Parent Fingerprint
 
-The first 4 bytes of the parent key identifier (Hash160 of the public key data).
+The first 4 bytes of the parent key identifier, which is Hash160 (RIPEMD160 after SHA256) of the public key data.
 
 #### Child Type
 

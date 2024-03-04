@@ -8,14 +8,14 @@ import {Step} from '@site/src/lib/utils.mdx'
 ## Signing A Transaction
 
 ### `Sign Transaction`
-Signs a transaction that can be submitted to the network at a later time using with `eth_sendRawTransaction` as long as the nonce and the
+Signs a transaction that can be submitted to the network at a later time using `eth_sendRawTransaction` as long as the nonce and the
 signature are correct. 
 This function requires input as follows:
 
 * Private Key <Step text="1"/> : The *Private key* to use for signing the transaction.
 * Nonce <Step text="2"/> : Must be equal to the transaction count (the returned value from `eth_getTransactionCount`).
 * Gas Price <Step text="3"/> : The gas price used for each paid gas, in Wei(the returned value from `eth_gasPrice`).
-* Gas Limit <Step text="4"/> : Gas limit provided for the transaction to execute.(A standard transfer of funds will have a static gas limit of 21000 WEI).
+* Gas Limit <Step text="4"/> : Gas limit provided for the transaction to execute.(A standard transfer of funds will have a static gas limit of 21000 Wei).
 * To Address <Step text="5"/> : The address the transaction is directed to.
 * Value <Step text="6"/> : The amount of Ether (in Wei) to send with this transaction.
 * Data <Step text="7"/> : The hash of the invoked method signature and encoded parameters (ABI).
@@ -27,16 +27,16 @@ This function requires input as follows:
 If the operation is successful, the value *Signed Transaction* <Step text="10"/> will hold the encoded and signed transaction data that can be passed to `eth_sendRawTransaction`.
 
 ### `Sign Type 2 Transaction`
-Signs a type 2 transaction that can be submitted to the network at a later time using with `eth_sendRawTransaction` as long as the nonce and the
+Signs a type 2 transaction that can be submitted to the network at a later time using `eth_sendRawTransaction` as long as the nonce and the
 signature are correct. This implementation follows EIP-1559 and uses `maxPriorityFeePerGas` and `maxFeePerGas` parameters instead of the `gasPrice`.
 This function requires input as follows:
 
 * Private Key <Step text="1"/> : The *Private key* to use for signing the transaction.
 * Chain ID <Step text="2"/> : The Blockchain ID.
 * Nonce <Step text="3"/> : Must be equal to the transaction count (the returned value from `eth_getTransactionCount`).
-* Max Priority Fee Per Gas <Step text="4"/> : The maximum amount the user is willing to pay as a tip to miners (in GWEI). Incentivizes prioritization of the transaction.
-* Max Fee Per Gas <Step text="5"/> : The maximum total amount the user is willing to pay for the transaction in total (in GWEI). Includes base fee and priority fee.
-* Gas Limit <Step text="6"/> : Gas limit provided for the transaction to execute.(A standard transfer of funds will have a static gas limit of 21000 WEI).
+* Max Priority Fee Per Gas <Step text="4"/> : The maximum amount the user is willing to pay as a tip to miners (in Wei). Incentivizes prioritization of the transaction.
+* Max Fee Per Gas <Step text="5"/> : The maximum total amount the user is willing to pay for the transaction in total (in Wei). Includes base fee and priority fee.
+* Gas Limit <Step text="6"/> : Gas limit provided for the transaction to execute.(A standard transfer of funds will have a static gas limit of 21000 Wei).
 * To Address <Step text="7"/> : The address the transaction is directed to.
 * Value <Step text="8"/> : The amount of Ether (in Wei) to send with this transaction.
 * Data <Step text="9"/> : The hash of the invoked method signature and encoded parameters (ABI).
