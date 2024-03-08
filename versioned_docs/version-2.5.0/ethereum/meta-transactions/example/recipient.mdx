@@ -6,17 +6,18 @@ import {Step, Highlight} from '@site/src/lib/utils.mdx'
 
 # Preparing the Recipient Contract
 
-We will be using [Remix](https://remix.ethereum.org/) web IDE to compile and deploy smart contracts to the Blockchain.
+We will be using [Remix](https://remix.ethereum.org/) web IDE to compile and deploy Smart Contracts to the Blockchain.
 
-We need to add to our own contract [ERC2771Context](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/metatx/ERC2771Context.sol)
-that provides a mechanism to override the sender and calldata of the execution context (msg.sender and msg.data)
-with a custom value specified by a trusted forwarder.
+Recipient Smart Contracts that are supposed to be called via Meta Transactions need to inherit from
+[ERC2771Context](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/metatx/ERC2771Context.sol)
+which provides a mechanism to override the sender and calldata of the execution context (msg.sender and msg.data)
+with custom values specified by a trusted forwarder.
 
 # Remix IDE
 
 * Create a new file in Remix and name it `Counter`.
 
-* For the demo purposes we will be using this simple counter contract.
+* For demo purposes we will be using a simple counter contract.
 ``` Solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;

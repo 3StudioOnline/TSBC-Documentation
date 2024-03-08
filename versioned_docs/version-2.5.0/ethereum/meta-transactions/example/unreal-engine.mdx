@@ -5,31 +5,32 @@ title: Unreal Engine Example
 import {Step, Highlight} from '@site/src/lib/utils.mdx'
 
 # Unreal Engine Example
-This is an example demonstrating how to make a meta transactions inside unreal engine and using `TSBC_plugin`.
+This is an example demonstrating how to make Meta Transactions inside Unreal Engine using this plugin.
 
 ## Prepare Meta Transaction Data for the User to Sign
 
 ### Nonce
-First of all we want to get the user's nonce from the `CounterForwarder` contract that we deployed earlier. [See Here](/docs/ethereum/meta-transactions/example/forwarder)
+First of all we want to get the user's nonce from the `CounterForwarder` contract that we deployed [earlier](/docs/ethereum/meta-transactions/example/forwarder).
+
 ![Nonce](_static/img/get_nonce.png)
 
 ### Data
-Save the encoded data of the `incrementCounter` function that we will be calling using meta transaction.
+Save the encoded data of the `incrementCounter` function that we are going to call using a Meta Transaction.
 
 ### Deadline
 
-In our case we will set the deadline to the current time plus 1 day from when the user signs the meta transaction in unix timestamp.
+In our case we will set the deadline to the current time plus 1 day from when the user signs the Meta Transaction in Unix Timestamp.
 
 ![Data_Deadline](_static/img/data_deadline.png)
 
 ### Private Key
-The user's private key that will sign the meta transaction.
+The user's private key that will be used to sign the Meta Transaction.
 
 ### Domain
 
 The domain struct should contain:
 
-* Name: The name of the forwarder that will be processing the transaction, in our case it is
+* Name: The name of the Forwarder that will be processing the transaction, in our case it is
 `CounterForwarder`.
 * Chain ID: The chain id of the Blockchain that the `CounterForwarder` contract is deployed on.
 * Verifying contract: This is the `CounterForwarder` contract address.
@@ -41,9 +42,9 @@ The message struct should contain:
 * From : The address of the user that will be signing this message.
 * To : The address of the deployed `Counter` contract.
 * Value : In our case it is `0` since the `incrementCounter` function is non-payable.
-* Gas : The gas limit that will be forwarded, we can set it to ``.
+* Gas : The gas limit that will be forwarded, we can set it to `300000`.
 * Nonce : The user nonce that we received earlier.
-* Deadline : A [unix timestamp](/docs/ethereum/meta-transactions/sign-meta-transaction#unix-timestamp) after which the request is not executable anymore, which we calculated earlier.
+* Deadline : A [Unix Timestamp](/docs/ethereum/meta-transactions/sign-meta-transaction#unix-timestamp) after which the request is not executable anymore, which we calculated earlier.
 * Data : The encoded data of the `incrementCounter` function.
 
 ![Sign Meta Transaction](_static/img/Sign_meta_transaction.png)
@@ -51,13 +52,13 @@ The message struct should contain:
 
 ## Relayer Execution
 
-In our case we want the dedicated server to execute the meta transaction on behalf the user.
+In our case we want a dedicated server to execute the Meta Transaction on behalf a user.
 
 ### Prepare Relayer Signing
 
-* The server should receive the data that the user had signed with the signed meta transaction also passed with them.
-* First thing we will encode the data by selecting the `execute` function from the forwarder contract *ABI*.
-* We then need to get the *relayer's* nonce and the current gas price to execute the transaction.
+* The server needs to receive the original Data that was used to create the Signed Meta Transaction.
+* First we will encode the data by selecting the `execute` function from the Forwarder contract *ABI*.
+* Then, we need to get the *Relayer's* nonce and the current gas price to execute the transaction.
 
 ![Prepare Relayer](_static/img/relayer_prepare.png)
 

@@ -6,18 +6,18 @@ import {Step, Highlight} from '@site/src/lib/utils.mdx'
 
 ## What are Meta Transactions
 
-Meta transactions are a popular way to enable users to make a transaction on blockchain without directly paying the gas fees.
+Meta transactions are a popular way to enable users to make a transaction on Blockchain without directly paying the gas fees.
 Instead, they sign a message off-chain, which is then sent to a relayer who pays the gas fees and executes the transaction process.
 
 # How Meta Transactions Work
 
-`User`: signs a meta transaction (that is a message containing information about the transaction he would like to execute).
+`User`: Signs a meta transaction (that is a message containing information about the transaction he would like to execute).
 
-`Relayer`: a web server with a wallet that signs a valid Ethereum transaction (that has the meta transaction as the payload) and sends it to the blockchain.
+`Relayer`: A web server with a wallet that signs a valid Ethereum transaction (that has the meta transaction as the payload) and sends it to the Blockchain.
 
-`Forwarder`: an Ethereum contract in charge of verifying the signature of the meta transaction that, not surprisingly, forwards the request to a recipient contract.
+`Forwarder`: An Ethereum contract in charge of verifying the signature of the meta transaction that, not surprisingly, forwards the request to a recipient contract.
 
-`Recipient`: the Ethereum contract that the user intended to call without paying the gas fee, this contract has to be able to preserve the identity of the user that initially requested the transaction.
+`Recipient`: The Ethereum contract that the user intended to call without paying the gas fee. This contract has to be able to preserve the identity of the user that initially requested the transaction.
 
 ![Meta-Transaction](_static/img/meta_transaction.png)
 
