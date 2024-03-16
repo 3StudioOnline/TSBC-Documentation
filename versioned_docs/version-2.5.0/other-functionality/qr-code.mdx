@@ -4,7 +4,16 @@ title: QR Code
 ---
 import {Step} from '@site/src/lib/utils.mdx'
 
-[*ZXing-C++ Third Party Library*](https://github.com/zxing-cpp/zxing-cpp) is used in generation of the QR code bit matrix.
+# What is a QR Code
+A QR code (Quick Response code) is a type of matrix barcode (or two-dimensional barcode) that can store a wide range of
+information and is easily scanned using a smartphone camera.
+
+In the context of Blockchain, a QR code serves as a convenient and secure method to represent wallet addresses and
+transaction information. Instead of manually typing long and complex addresses, users can scan a QR code to initiate
+transactions, exchange public keys, or access specific content on a Blockchain. This simplifies the process of sending
+and receiving digital currencies, enhancing user experience and reducing the risk of errors in transactions.
+
+For more information, see this [Wikipedia](https://en.wikipedia.org/wiki/QR_code) article.
 
 ## QR Code Generation as Texture2D
 `Generate QR Code as Texture2D` generates a QR code from a text string of specified size in pixels as a Texture2D.
@@ -56,3 +65,7 @@ This function requires inputs as follows:
 
 If the conversion is successful, the value *QR Code* <Step text="4"/> will return the QR code as a Texture2D
 with encoded content in it.
+
+:::note
+The third-party library [ZXing-C++](https://github.com/zxing-cpp/zxing-cpp) is used to generate the QR codes.
+:::
