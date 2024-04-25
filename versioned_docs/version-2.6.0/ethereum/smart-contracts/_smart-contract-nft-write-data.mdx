@@ -1,0 +1,40 @@
+---
+sidebar_position: 8
+title: Smart Contract and NFT Write Data 
+---
+import {Step} from '@site/src/lib/utils.mdx'
+
+## Smart Contract Write Data & NFT minting
+
+Minting an nft or calling a function to change data on blockchain is so called payable call function. Meaning you are posting it not via "Eth_call" 
+but by "eth_SendRawTransaction". However it requires few extra steps in comparison to sending just normal funds.
+
+1. Estimate Gas
+
+Template Image
+![Template Image](_static/img/1.png)
+
+In order for our transaction that is payable not to fail we need to know estimated gas price of the transaction. 
+it is solely dependent on the DATA pushed with it. We can encode the function and its inputs in advance for use in all of those calls in a row. 
+Now we know how much gas a call of this function will cost.
+
+2. Sign Transaction
+
+Template Image
+![Template Image](_static/img/1.png)
+
+Now that we know the gas limit from estimate gas price, we can finish the signing of transaction. we input our private key of the caller, 
+nonce (transaction count), gas price (from proper eth_ function), to address being the contract address, value being the payable value. 
+Data  - as our encoded ABI values we created earlier. chain id from proper blockchain the token is on.
+Important: the value for many call functions call be 0. but even so must be set to zero. All "write to contract" 
+functions requires this procedure and payment of gas fees for execution, ,however some like minting functions -require 
+additional fee on top of it - that ends up in the contracts balance.
+
+3. Send Transaction
+
+Now use "ETH send raw transaction" as described before with the transaction hash as signed transaction as input in sign transaction data.
+
+Template Image
+![Template Image](_static/img/1.png)
+
+If everything was followed correctly - you will get a transaction count and with next block (usually few seconds) the change in blockchain contract object will be visible.
