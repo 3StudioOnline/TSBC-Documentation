@@ -10,7 +10,7 @@ This is an example demonstrating how to make Meta Transactions inside Unreal Eng
 ## Prepare Meta Transaction Data for the User to Sign
 
 ### Nonce
-First of all we want to get the user's nonce from the `CounterForwarder` contract that we deployed [earlier](/docs/ethereum/meta-transactions/example/forwarder).
+First of all we want to get the user's nonce from the `CounterForwarder` contract that we deployed [earlier](/docs/2.5.1/ethereum/meta-transactions/example/forwarder).
 
 ![Nonce](_static/img/get_nonce.png)
 
@@ -44,7 +44,7 @@ The message struct should contain:
 * Value : In our case it is `0` since the `incrementCounter` function is non-payable.
 * Gas : The gas limit that will be forwarded, we can set it to `300000`.
 * Nonce : The user nonce that we received earlier.
-* Deadline : A [Unix Timestamp](/docs/ethereum/meta-transactions/sign-meta-transaction#unix-timestamp) after which the request is not executable anymore, which we calculated earlier.
+* Deadline : A [Unix Timestamp](/docs/2.5.1/ethereum/meta-transactions/sign-meta-transaction#unix-timestamp) after which the request is not executable anymore, which we calculated earlier.
 * Data : The encoded data of the `incrementCounter` function.
 
 ![Sign Meta Transaction](_static/img/sign_meta_transaction.png)
