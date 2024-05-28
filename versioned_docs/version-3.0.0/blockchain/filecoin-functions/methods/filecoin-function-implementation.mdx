@@ -1,0 +1,19 @@
+---
+sidebar_position: 1
+title: Filecoin Function Implementation
+---
+import {Step} from '@site/src/lib/utils.mdx'
+
+## General Functions Implementation 
+
+All *Filecoin* functions that are supported in the plugin have 2 versions of them as shown in the image below.
+The first one have a *Response Delegate* as *Call-back*,and the other one have *Response Delegate* as *Async Task*.
+
+*Async* functions works better for use cases where there is no parallel calls. While *Call-backs* works best if you're querying multiple calls at the 
+same time and not putting them in queue.
+
+![General Functions Implementation](_static/img/01_filecoin_general_functions.png)
+
+:::note
+Both versions take the same input and returns the same output.
+::: 
