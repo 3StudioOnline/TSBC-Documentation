@@ -1,0 +1,23 @@
+---
+sidebar_position: 1
+title: Private Key
+---
+import {Step} from '@site/src/lib/utils.mdx'
+
+Child private keys can only be derived from private keys. The child can be *hardened*. *Non-hardened* keys are still useful,
+but need to be handled carefully to avoid security risks.
+For more information about the concept of a *hardened* child read [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#implications).
+
+## Deriving a Child Private Key
+
+`Derive HD Wallet Private Key` uses an extended private key to create a child key with specified parameters.
+This function requires inputs as follows:
+
+* Key <Step text="1"/> : The private key used in the derivation process. Invalid and public keys will cause the operation to fail.
+* Child Type <Step text="2"/> : Type of child to create. This allows for the child key to be *hardened* if needed.
+* Child Index <Step text="3"/> : The number of the child. It is an index between 0 and 2<sup>31</sup>-1.
+*Hardened* child keys will have their index shifted by 2<sup>31</sup> when serialized to match BIP-32 specification.
+
+![Deriving a Child Private Key](_static/img/derive_hd_wallet_private_key.png)
+
+If the operation is successful, the value *Derived Key* <Step text="4"/> will hold the generated valid child private key.
